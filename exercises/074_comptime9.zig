@@ -1,4 +1,6 @@
-//
+// IMPORTANT: this exercise is being skipped by the build code because
+// the zig compiler now corrects bad uses of comptime automatically.
+
 // In addition to knowing when to use the 'comptime' keyword,
 // it's also good to know when you DON'T need it.
 //
