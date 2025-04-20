@@ -119,10 +119,6 @@
 // after all we need some practice. Suppose we want to count the words
 // of this little poem:
 //
-// 	My name is Ozymandias, King of Kings;
-// 	Look on my Works, ye Mighty, and despair!
-// 	 by Percy Bysshe Shelley
-//
 //
 const std = @import("std");
 const print = std.debug.print;
@@ -136,7 +132,7 @@ pub fn main() !void {
     ;
 
     // now the tokenizer, but what do we need here?
-    var it = std.mem.tokenizeAny(u8, poem, ???);
+    var it = std.mem.tokenizeAny(u8, poem, " ,;!\n");
 
     // print all words and count them
     var cnt: usize = 0;
