@@ -44,10 +44,7 @@ pub fn main() !void {
     // wait a minute...
     // opening a directory might fail!
     // what should we do here?
-    var output_dir: std.fs.Dir = cwd.openDir("output", .{}) catch |e| switch (e) {
-        else => return e,
-    };
-    defer output_dir.close();
+    var output_dir: std.fs.Dir = try cwd.openDir("output", .{});
 
     // we try to open the file `zigling.txt`,
     // and propagate any error up
